@@ -17,3 +17,12 @@ These should be at the top level of your repository:
 This project is part of NOAA-EMC Ecosystem. 
 
 See LICENSE and DISCLAIMER for details.
+
+## Radiosonde latency plotting
+
+Use `plot_radiosonde_latency.py` to plot the latency between radiosonde report
+valid time and BUFR tank receipt time (from `rtrcpt` in `nceplibs-bufr`):
+
+```bash
+python plot_radiosonde_latency.py /path/to/input.bufr --message-type-filter ADPUPA --cutoff-minutes 180
+```
